@@ -22,7 +22,8 @@ async def setup_callbacks_for_custom_filters(cb: CallbackQuery):
                               callback_data="set_custom_filter_sticker"),
          InlineKeyboardButton(f"Allow GIFs {'✅' if ('gif' in get_data) else '❌'}",
                               callback_data="set_custom_filter_gif")],
-        [InlineKeyboardButton(f"Allow Forwarded Messages", callback_data="set_custom_filter_forward")],
+        [InlineKeyboardButton(f"Allow Forwarded Messages {'✅' if ('forward' in get_data) else '❌'}",
+                              callback_data="set_custom_filter_forward")],
         [InlineKeyboardButton(f"Allow Text Messages {'✅' if ('text' in get_data) else '❌'}",
                               callback_data="set_custom_filter_text")]
     ]
