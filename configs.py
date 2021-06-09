@@ -13,9 +13,9 @@ class Config(object):
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
 
     ASK_FOR_BLOCKED_WORDS_LIST = os.environ.get("ASK_FOR_BLOCKED_WORDS_LIST",
-                                                "Reply to this message with a list of Blocked Words. If those in Message I will not Forward them!\n\nExample:\nhello\nhacker\ncracker\njoin\nabuse heroku\njoin my channel\nchutiyappa")
+                                                "Reply to this message with a list of Blocked Words. If those in Message I will delete them!\n\nExample:\nhello\nhacker\ncracker\njoin\nabuse heroku\njoin my channel\nchutiyappa")
     ASK_FOR_BLOCKED_EXT_LIST = os.environ.get("ASK_FOR_BLOCKED_EXT_LIST",
-                                              "Reply to this message with a list of Blocked Extensions. If any file with that extension I will not forward that file!\n\nExample:\nzip\nmkv\ntorrent\ntxt\npy\ncap\nmp4\nmp3\nrar\n\nExtensions should be in lower case!")
+                                              "Reply to this message with a list of Blocked Extensions. If any file with that extension I will delete that file!\n\nExample:\nzip\nmkv\ntorrent\ntxt\npy\ncap\nmp4\nmp3\nrar\n\nExtensions should be in lower case!")
     START_TEXT = """
 Hi, This is Massages Manager Bot!
 I can do many things with messages in a Group.
