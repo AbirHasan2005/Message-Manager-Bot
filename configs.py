@@ -11,7 +11,6 @@ class Config(object):
     OWNER_ID = int(os.environ.get("OWNER_ID", 1445283714))
     BOT_USERNAME = os.environ.get("BOT_USERNAME")
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
-    USER_SESSION_STRING = os.environ.get("USER_SESSION_STRING", ":memory:")
 
     ASK_FOR_BLOCKED_WORDS_LIST = os.environ.get("ASK_FOR_BLOCKED_WORDS_LIST",
                                                 "Reply to this message with a list of Blocked Words. If those in Message I will not Forward them!\n\nExample:\nhello\nhacker\ncracker\njoin\nabuse heroku\njoin my channel\nchutiyappa")
@@ -27,5 +26,5 @@ Check /settings !!
 Custom Filters is for deleting only separate type Media Messages or Only Text Messages.
 Like you can set only delete `photo` or `video` or `document` or `audio` or `text` ...
 
-If Need More Help Ask in [Support Group](https://t.me/JoinOT)!
+If Need More Help Ask in [Support Group](https://t.me/linux_repo)!
 """

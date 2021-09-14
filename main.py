@@ -29,7 +29,7 @@ async def start_handler(bot: Client, message: Message):
             getChat = await bot.get_chat(chat_id=message.chat.id)
         except:
             await message.reply_text(
-                text="Make me Admin in this Chat!\n\nElse I will work properly!",
+                text="Make me Admin in this Chat!\n\nElse I will not work properly!",
                 quote=True
             )
             return
@@ -61,7 +61,7 @@ async def settings_handler(bot: Client, message: Message):
             getChat = await bot.get_chat(chat_id=message.chat.id)
         except:
             await message.reply_text(
-                text="Make me Admin in this Chat!\n\nElse I will work properly!",
+                text="Make me Admin in this Chat!\n\nElse I will not work properly!",
                 quote=True
             )
             return
