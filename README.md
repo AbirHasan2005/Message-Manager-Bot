@@ -23,6 +23,7 @@ More features coming soon!
 - `MONGODB_URI` MongoDB URI for Saving Chat Settings. Video Tutorial [Here](https://www.youtube.com/watch?v=aXlF80Cn7iU).
 - `OWNER_ID` Your Telegram User ID.
 - `BOT_USERNAME` Your Bot's Username. Without `@`.
+- `USER_SESSION_STRING` User Client Session String: [@StringSessionGen_Bot](https://t.me/StringSessionGen_Bot)
 - `LOG_CHANNEL` A Telegram Logs Channel ID for some trace.
 
 ### Heroku Deploy:

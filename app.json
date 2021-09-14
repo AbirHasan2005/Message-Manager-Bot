@@ -29,6 +29,9 @@
         "BOT_USERNAME": {
             "description": "Your Bot's Username. Without @"
         },
+        "USER_SESSION_STRING": {
+            "description": "User Client Session String. Use @StringSessionGen_Bot"
+        },
         "LOG_CHANNEL": {
             "description": "A Telegram Logs Channel ID for some trace."
         }

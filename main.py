@@ -6,7 +6,7 @@ from helpers.settings_msg import show_settings
 from helpers.message_deletor import delete_message
 from helpers.custom_filters_handler import setup_callbacks_for_custom_filters, blocked_words_loop, blocked_ext_checker
 
-from pyrogram import Client, filters
+from pyrogram import Client, filters, idle
 from pyrogram.types import Message, ForceReply, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 
 AHBot = Client(
@@ -14,6 +14,11 @@ AHBot = Client(
     api_id=Config.API_ID,
     api_hash=Config.API_HASH,
     bot_token=Config.BOT_TOKEN
+)
+UserBot = Client(
+    session_name=Config.USER_SESSION_STRING,
+    api_id=Config.API_ID,
+    api_hash=Config.API_HASH
 )
 
 
@@ -118,7 +123,7 @@ async def reply_handler(bot: Client, message: Message):
         )
 
 
-@AHBot.on_message((filters.text | filters.media) & ~filters.private & ~filters.edited, group=-1)
+@UserBot.on_message((filters.text | filters.media) & ~filters.private & ~filters.edited, group=-1)
 async def main_handler(_, message: Message):
     if not await mongodb.is_chat_exist(message.chat.id):
         return
@@ -240,4 +245,8 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         await cb.message.delete(True)
 
 
-AHBot.run()
+AHBot.start()
+UserBot.start()
+idle()
+UserBot.stop()
+AHBot.stop()
